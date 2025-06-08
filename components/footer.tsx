@@ -8,7 +8,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()}{" "}
           <span className="font-semibold">My Online Store</span>. Built by{" "}
           <a
-            href="https://www.linkedin.com/in/your-link"
+            href="https://www.linkedin.com/in/billboah"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"

@@ -3,14 +3,12 @@ import axios from "axios";
 import ProductDetailClient from "@/components/productDetailClient";
 import { ProductType } from "@/types";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
-export default async function ProductDetailPage({ params }: Props) {
-  const { id } = params;
+export default async function ProductDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
 
   try {
     const res = await axios.get<ProductType>(
