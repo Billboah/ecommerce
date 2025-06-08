@@ -4,7 +4,7 @@ import ProductDetailClient from "@/components/productDetailClient";
 import { ProductType } from "@/types";
 
 type Props = {
-  params: { id: number };
+  params: { id: string };
 };
 
 export default async function ProductDetailPage({ params }: Props) {
