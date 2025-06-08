@@ -4,7 +4,7 @@ import { ProductType } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../app/context/CartContext";
-import { Loader, LoaderText } from "@/lib/loaders";
+import { Loader } from "@/lib/loaders";
 import { useState } from "react";
 
 type Props = {
@@ -45,7 +45,7 @@ export default function ProductCard({ product }: Props) {
           style={{ objectFit: "contain" }}
           sizes="(min-width: 768px) 50vw, 100vw"
           priority
-          onLoadingComplete={() => setIsImageLoaded(true)}
+          onLoad={() => setIsImageLoaded(true)}
           className={`object-contain transition-opacity duration-300 ${
             isImageLoaded ? "opacity-100" : "opacity-0"
           }`}

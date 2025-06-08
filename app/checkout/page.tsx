@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useCart } from "../context/CartContext";
 import { addOrder } from "@/util/order";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Checkout() {
   const { cart } = useCart();
@@ -165,18 +166,18 @@ export default function Checkout() {
             </h2>
             <p className="text-sm mb-6">Thank you for your purchase.</p>
             <div className="flex justify-center gap-4">
-              <a
+              <Link
                 href="/"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md"
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/orders"
                 className="px-4 py-2 bg-gray-700 text-white rounded-md"
               >
                 View Orders
-              </a>
+              </Link>
             </div>
           </div>
         </div>

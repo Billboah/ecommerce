@@ -43,7 +43,7 @@ export default function ProductDetailClient({ product }: Props) {
             style={{ objectFit: "contain" }}
             sizes="(min-width: 768px) 50vw, 100vw"
             priority
-            onLoadingComplete={() => setIsImageLoaded(true)}
+            onLoad={() => setIsImageLoaded(true)}
             className={`object-contain transition-opacity duration-300 ${
               isImageLoaded ? "opacity-100" : "opacity-0"
             }`}
