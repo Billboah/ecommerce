@@ -48,7 +48,7 @@ A modern, responsive e-commerce web application built with Next.js, React, and T
 ## 🌐 Explore the Live Demo
 
 **See it in action:**  
-[Live Demo Link](https://your-demo-url.com) <!-- Replace with your actual deployed URL -->
+[Live Demo Link](https://ecommerce-nine-iota-47.vercel.app/) <!-- Replace with your actual deployed URL -->
 
 ---
 
