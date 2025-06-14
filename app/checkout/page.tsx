@@ -9,6 +9,7 @@ import Link from "next/link";
 
 export default function Checkout() {
   const { cart } = useCart();
+  const { clearCart } = useCart();
   const [paymentMethod, setPaymentMethod] = useState("card");
   const [showSuccess, setShowSuccess] = useState(false);
   const router = useRouter();
@@ -18,9 +19,9 @@ export default function Checkout() {
   useEffect(() => {
     if (cart.length === 0) {
       alert("Your cart is empty. Redirecting to cart...");
-      router.push("/cart");
+      router.replace("/cart");
     }
-  }, [cart, router]);
+  }, []);
 
   const handlePayment = () => {
     if (cart.length === 0) {
@@ -169,12 +170,22 @@ export default function Checkout() {
               <Link
                 href="/"
                 className="px-4 py-2 bg-blue-600 text-white rounded-md"
+                onClick={() => {
+                  clearCart();
+                  setShowSuccess(false);
+                }}
+                aria-label="Go to Home"
               >
                 Home
               </Link>
               <Link
                 href="/orders"
                 className="px-4 py-2 bg-gray-700 text-white rounded-md"
+                onClick={() => {
+                  clearCart();
+                  setShowSuccess(false);
+                }}
+                aria-label="View Orders"
               >
                 View Orders
               </Link>
