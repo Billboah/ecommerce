@@ -8,15 +8,19 @@ import Footer from "@/components/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // good for performance
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "E-commerce App",
+  description:
+    "A modern e-commerce application built with Next.js and Tailwind CSS.",
   keywords: [
     "E-commerce",
     "Next.js",
@@ -51,12 +55,7 @@ export const metadata: Metadata = {
     "Web Best Practices",
     "Web Development Trends",
   ],
-  authors: [
-    {
-      name: "Yeboah William",
-      url: "https://yourwebsite.com",
-    },
-  ],
+  authors: [{ name: "Yeboah William", url: "https://yourwebsite.com" }],
   creator: "Yeboah William",
   openGraph: {
     title: "E-commerce App",
@@ -73,15 +72,13 @@ export const metadata: Metadata = {
       },
     ],
   },
-  description:
-    "A modern e-commerce application built with Next.js and Tailwind CSS.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body

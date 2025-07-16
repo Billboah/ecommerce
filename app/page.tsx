@@ -1,18 +1,20 @@
-import axios from "axios";
 import ProductCard from "@/components/productCard";
 import { ProductType } from "@/types";
 
-export default async function Home() {
-  let products: ProductType[] = [];
-
+async function getProducts(): Promise<ProductType[]> {
   try {
-    const response = await axios.get<ProductType[]>(
-      "https://fakestoreapi.com/products"
-    );
-    products = response.data;
+    const response = await fetch("https://fakestoreapi.com/products", {
+      next: { revalidate: 0 }, // For full static generation
+    });
+    return await response.json();
   } catch (error) {
-    console.log(error);
+    console.error("Error fetching products:", error);
+    return [];
   }
+}
+
+export default async function Home() {
+  const products = await getProducts();
 
   return (
     <main className="min-h-screen bg-gray-100 py-10 px-4">
