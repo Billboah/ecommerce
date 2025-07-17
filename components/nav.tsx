@@ -1,8 +1,8 @@
-"use client";
+import React from "react";
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useCart } from "@/app/context/CartContext";
+import { useCart } from "@/context";
 import { useState, useEffect } from "react";
 import { FiMenu, FiX, FiArrowLeft } from "react-icons/fi";
 import { FaCartArrowDown } from "react-icons/fa";

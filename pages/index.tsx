@@ -1,21 +1,18 @@
 import ProductCard from "@/components/productCard";
 import { ProductType } from "@/types";
 
-async function getProducts(): Promise<ProductType[]> {
+export async function getStaticProps() {
   try {
-    const response = await fetch("https://fakestoreapi.com/products", {
-      next: { revalidate: 0 }, // For full static generation
-    });
-    return await response.json();
+    const res = await fetch("https://fakestoreapi.com/products");
+    const products: ProductType[] = await res.json();
+    return { props: { products } };
   } catch (error) {
     console.error("Error fetching products:", error);
-    return [];
+    return { props: { products: [] } };
   }
 }
 
-export default async function Home() {
-  const products = await getProducts();
-
+export default function Home({ products }: { products: ProductType[] }) {
   return (
     <main className="min-h-screen bg-gray-100 py-10 px-4">
       <div className="max-w-6xl mx-auto">

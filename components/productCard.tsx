@@ -1,9 +1,9 @@
-"use client";
+import React from "react";
 
 import { ProductType } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { useCart } from "../app/context/CartContext";
+import { useCart } from "../context";
 import { Loader } from "@/lib/loaders";
 import { useState } from "react";
 

@@ -1,8 +1,7 @@
-"use client";
-
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../context";
 import { addOrder } from "@/util/order";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
