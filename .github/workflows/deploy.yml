@@ -20,10 +20,8 @@ jobs:
       - name: 📦 Install dependencies
         run: npm install
 
-      - name: 🛠 Build and export static site
-        run: |
-          npm run build
-          npx next export
+      - name: 🛠 Build static site
+        run: npm run build # next build will export automatically because of output: "export"
 
       - name: 🚀 Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
