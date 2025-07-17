@@ -7,8 +7,8 @@ A modern, responsive e-commerce web application built with **Next.js**, **React*
 ## 🚀 Live Demo
 
 **▶️ View the live app:**  
-[CloudFront Deployed Demo](https://d1pqqpiwhj12gf.cloudfront.net)  
-*(or update this with your custom domain)*
+[CloudFront Deployed Demo](https://duukxvn7otw9i.cloudfront.net)  
+_(or update this with your custom domain)_
 
 ---
 
@@ -49,14 +49,14 @@ This project is not just a frontend — it’s a **mini DevOps project** deploye
 
 ## 🛠️ Skills Demonstrated
 
-| Category | Skills |
-|----------|--------|
-| **Frontend** | Next.js, React, TypeScript, Tailwind CSS |
-| **State** | Context API, Local Storage |
-| **Cloud** | AWS S3, CloudFront, IAM, OAC, Static Site Hosting |
-| **DevOps** | GitHub Actions, CI/CD automation |
-| **Performance** | CDN delivery, secure access, static optimization |
-| **Architecture** | Production-ready deployment flow |
+| Category         | Skills                                            |
+| ---------------- | ------------------------------------------------- |
+| **Frontend**     | Next.js, React, TypeScript, Tailwind CSS          |
+| **State**        | Context API, Local Storage                        |
+| **Cloud**        | AWS S3, CloudFront, IAM, OAC, Static Site Hosting |
+| **DevOps**       | GitHub Actions, CI/CD automation                  |
+| **Performance**  | CDN delivery, secure access, static optimization  |
+| **Architecture** | Production-ready deployment flow                  |
 
 ---
 
@@ -98,4 +98,3 @@ Looking for someone who can:
 ---
 
 **Thanks for visiting – built with love, cloud, and code 🚀**
-
