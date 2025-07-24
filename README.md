@@ -45,6 +45,22 @@ This project is not just a frontend — it’s a **mini DevOps project** deploye
 - 📄 **Static Site Export** – `next export` used for S3-optimized output
 - 🧠 **Best Practices Followed:** Origin Access Control (OAC), bucket policy restrictions, HTTPS delivery, and custom caching
 
+### 🗺️ Architecture Diagram (AWS CI/CD Flow)
+
+![AWS Architecture Diagram](./aws-diagram.png)
+
+**How it works:**
+
+1. **GitHub** – Source code is pushed to the main branch.
+2. **AWS CodePipeline** – Triggers CI/CD process on code updates.
+3. **S3 Bucket** – Stores static files with static website hosting enabled.
+4. **IAM** – Manages permissions between services securely.
+5. **CloudFront** – Fetches and caches files globally from S3.
+6. **Web Application** – Delivered to users through fast CDN.
+7. **Users** – Access the app with low latency from anywhere.
+
+> This setup ensures automated deployment, global availability, and secure delivery of your application.
+
 ---
 
 ## 🛠️ Skills Demonstrated
