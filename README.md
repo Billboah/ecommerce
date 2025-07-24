@@ -47,7 +47,7 @@ This project is not just a frontend — it’s a **mini DevOps project** deploye
 
 ### 🗺️ Architecture Diagram (AWS CI/CD Flow)
 
-![AWS Architecture Diagram](./aws-diagram.png)
+![AWS Architecture Diagram](./public/aws-diagram.png)
 
 **How it works:**
 
